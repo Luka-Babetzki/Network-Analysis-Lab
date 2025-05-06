@@ -27,12 +27,45 @@ The objective of this lab is to investigate a suspected malware compromise by an
 
 A SOC Analyst at Umbrella Corporation is going through SIEM alerts and sees the alert for connections to a known malicious domain. The traffic is coming from Sara’s computer, an Accountant who receives a large volume of emails from customers daily. Looking at the email gateway logs for Sara’s mailbox there is nothing immediately suspicious, with emails coming from customers. Sara is contacted via her phone and she states a customer sent her an invoice that had a document with a macro, she opened the email and the program crashed. The SOC Team retrieved a PCAP for further analysis.
 
-### 1. <Step 1>
+---
+
+### 1. Wireshark
+
+#### 1.1 Preliminary Analysis
+
+I began the analysis by opening the provided PCAP file in Wireshark and navigating to **Statistics > Capture File Properties**. This gave me an overview of the capture timeline. 
+
+- First packet: 2018-11-27 08:30:12 UTC
+- Last packet: 2018-11-27 09:12:16 UTC
+- Total capture duration: ~42 minutes
+
+_(Note: Verifying the timeframe early in the investigation is best practise when confirming that the PCAP was relevant to the suspected activity window)_
+
+Next, I examined the protocol hierarchy via **Statistics > Protocol Hierarchy**. This view allowed me to identify which network protocols were present and their proportional usage across the capture. It’s a useful step to identify unexpected or suspicious protocols that might indicate malicious behavior.
+
+To better understand the key communication flows in the traffic, I looked at **Statistics > Conversations > IPv4**, sorting the results by byte count in descending order. This revealed that the internal host 10.11.27.101 was communicating primarily with three external IP addresses: 
+
+- 95.181.198.231
+- 176.32.33.108
+- 83.166.247.211
+
+These addresses became the focus of my subsequent investigation.
+
+#### 1.2 Investigation
 
 <...>
 
----
-### 2. <Step 2>
+#### 1.3 Event Timeline and Observations
+
+<...>
+
+### 2. Zui
+
+#### 2.1 Investigation
+
+<...>
+
+#### 2.2 Observations
 
 <...>
 
