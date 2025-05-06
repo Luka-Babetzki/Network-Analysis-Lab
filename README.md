@@ -8,11 +8,11 @@ The objective of this lab is to investigate a suspected malware compromise by an
 
 ### Skills Learned
 
-- <...>
-- <...>
-- <...>
-- <...>
-- <...>
+- Network traffic analysis using Wireshark
+- Identifying malicious communication via domain and IP correlation
+- Using VirusTotal for domain/IP reputation checks
+- Interpreting protocol behavior (DNS, HTTP, TLS, TCP)
+- Filtering and extracting meaningful data from large PCAP files
 
 ### Tools Used
 
@@ -77,35 +77,39 @@ Below is a timeline of key events observed during the investigation. The "Tag" c
 | 🔵 | 2018-11-27 16:31:52 | 757-758 | 83.166.247.211 | mautergase.com | TLS handshake (SNI: mautergase.com) |
 | 🔴 | 2018-11-27 16:38:39 | 911 | 95.181.198.231 | — | GET request for .rar file |
 
+<!--
 
 ### 2. Zui
 
 #### 2.1 Investigation
 
-<...>
+
 
 #### 2.2 Observations
 
-<...>
+
+(To be completed)
+
+-->
 
 ---
 ## Lab Answers
 
-1). **What’s the private IP of the infected host?** _Answer_
+1). **What’s the private IP of the infected host?** _`10.11.27.101`_
 
-2). **What’s the malware binary that the macro document is trying to retrieve?** _Answer_
+2). **What’s the malware binary that the macro document is trying to retrieve?** _`spet10.spr`_
 
-3). **From what domain HTTP requests with GET /images/ are coming from?** _Answer_
+3). **From what domain HTTP requests with GET /images/ are coming from?** _`cochrimato.com`_
 
-4). **The SOC Team found Dridex, a follow-up malware from Ursnif infection, to be the culprit. The customer who sent her the macro file is compromised. What’s the full URL ending in .rar where Ursnif retrieves the follow-up malware from?** _Answer_
+4). **The SOC Team found Dridex, a follow-up malware from Ursnif infection, to be the culprit. The customer who sent her the macro file is compromised. What’s the full URL ending in .rar where Ursnif retrieves the follow-up malware from?** _`http://95.181.198.231/oiioiashdqbwe.rar`_
 
-5). **What is the Dridex post-infection traffic IP addresses beginning with 185.?** _Answer_
+5). **What is the Dridex post-infection traffic IP addresses beginning with 185.?** _`185.244.150.230`_
 
 ---
 ## Lessons Learned
 
-- 
-- 
-- 
-- 
-- 
+- Always confirm the time range of the PCAP to ensure it's relevant to the incident.
+- DNS resolution can be an early indicator of suspicious activity.
+- Headers such as `MZ` can help quickly identify executable files in HTTP payloads.
+- VirusTotal is a powerful tool for correlating domain/IP reputation in malware analysis.
+- Segmenting and filtering traffic by external IP is a highly effective triage strategy during PCAP analysis.
