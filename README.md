@@ -45,9 +45,9 @@ Next, I examined the protocol hierarchy via **Statistics > Protocol Hierarchy**.
 
 To better understand the key communication flows in the traffic, I looked at **Statistics > Conversations > IPv4**, sorting the results by byte count in descending order. This revealed that the internal host 10.11.27.101 was communicating primarily with three external IP addresses: 
 
-- 95.181.198.231
-- 176.32.33.108
-- 83.166.247.211
+- `95.181.198.231`
+- `176.32.33.108`
+- `83.166.247.211`
 
 These addresses became the focus of my subsequent investigation.
 
