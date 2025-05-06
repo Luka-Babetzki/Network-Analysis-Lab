@@ -34,3 +34,26 @@ A SOC Analyst at Umbrella Corporation is going through SIEM alerts and sees the 
 ---
 ### 2. <Step 2>
 
+<...>
+
+---
+## Lab Answers
+
+1). **What’s the private IP of the infected host?** _Answer_
+
+2). **What’s the malware binary that the macro document is trying to retrieve?** _Answer_
+
+3). **From what domain HTTP requests with GET /images/ are coming from?** _Answer_
+
+4). **The SOC Team found Dridex, a follow-up malware from Ursnif infection, to be the culprit. The customer who sent her the macro file is compromised. What’s the full URL ending in .rar where Ursnif retrieves the follow-up malware from?** _Answer_
+
+5). **What is the Dridex post-infection traffic IP addresses beginning with 185.?** _Answer_
+
+---
+## Lessons Learned
+
+- 
+- 
+- 
+- 
+- 
