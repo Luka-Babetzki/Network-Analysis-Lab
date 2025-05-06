@@ -1,5 +1,7 @@
 # Network Analysis Lab
 
+_**Source:** https://blueteamlabs.online/home/challenge/network-analysis-malware-compromise-e882f32908_
+
 ## Objective
 
 <...>
