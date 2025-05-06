@@ -4,7 +4,7 @@ _**Source:** https://blueteamlabs.online/home/challenge/network-analysis-malware
 
 ## Objective
 
-<...>
+The objective of this lab is to investigate a suspected malware compromise by analysing a network capture (PCAP) file. The scenario involves identifying how an infection occurred, tracing the command-and-control communication, and uncovering the delivery and payload mechanisms used in the attack. This exercise simulates a real-world Security Operations Center (SOC) workflow in responding to malware-related alerts, with a focus on network forensics and threat hunting.
 
 ### Skills Learned
 
@@ -16,9 +16,9 @@ _**Source:** https://blueteamlabs.online/home/challenge/network-analysis-malware
 
 ### Tools Used
 
-- <...>
-- <...>
-- <...>
+- Wireshark
+- VirtusTotal
+- Zui
 
 ---
 ## Steps
