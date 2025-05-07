@@ -29,9 +29,8 @@ A SOC Analyst at Umbrella Corporation is going through SIEM alerts and sees the 
 
 ---
 
-### 1. Wireshark
 
-#### 1.1 Preliminary Analysis
+### 1. Preliminary Analysis
 
 I began the analysis by opening the provided PCAP file in Wireshark and navigating to **Statistics > Capture File Properties**. This gave me an overview of the capture timeline. 
 
@@ -51,7 +50,7 @@ To better understand the key communication flows in the traffic, I looked at **S
 
 These addresses became the focus of my subsequent investigation.
 
-#### 1.2 Investigation
+### 2. Investigation
 
 First, I focused on IP address `95.181.198.231`. On the Packet List Pane, I noticed that packet 1 contained a DNS request to a domain called: klychenogg.com, followed by a DNS response in packet 2 that refers to the same IP address and domain name. Next, I searched VirtusTotal for this domain name, revealing that 10 vendors had flagged this domain as malicious. By using a follow up search using the IP address, I found no malicious indicators however revealing that the IP is registered in Russia. _(Note: This can be an indicator of suspicious activity if the client, who this PCAP file belongs to, does not do business with Russia)_
 
@@ -64,7 +63,7 @@ Next, I shifted my focus to the second external IP address: `176.32.33.108`. I a
 
 Finally, I investigated the third IP address of `83.166.247.211`, using the same `ip.addr` filter. This IP also showed a clean TCP handshake, followed immediately by a TLS Client Hello in packet 757. Within this handshake, I extracted the Server Name Indication `(SNI) field`, which revealed the domain `mautergase.com`. I reviewed this domain and IP on VirusTotal; both were flagged by 2 vendors each and also appeared to be hosted in Russia. To broaden my view, I right-clicked the handshake field in packet 757 and prepared a display filter to view all Client Hello messages throughout the capture.
 
-#### 1.3 Event Timeline and Observations
+### 3. Event Timeline and Observations
 
 Below is a timeline of key events observed during the investigation. The "Tag" column uses emojis to distinguish activity between the three suspicious IP addresses for easier visual correlation.
 
