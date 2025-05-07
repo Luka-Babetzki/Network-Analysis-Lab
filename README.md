@@ -42,7 +42,7 @@ _(Note: Verifying the timeframe early in the investigation is best practise when
 
 Next, I examined the protocol hierarchy via **Statistics > Protocol Hierarchy**. This view allowed me to identify which network protocols were present and their proportional usage across the capture. It’s a useful step to identify unexpected or suspicious protocols that might indicate malicious behavior.
 
-To better understand the key communication flows in the traffic, I looked at **Statistics > Conversations > IPv4**, sorting the results by byte count in descending order. This revealed that the internal host 10.11.27.101 was communicating primarily with three external IP addresses: 
+To better understand the key communication flows in the traffic, I looked at **Statistics > Conversations > IPv4**, sorting the results by byte count in descending order. This revealed that the internal host `10.11.27.101` was communicating primarily with three external IP addresses: 
 
 - `95.181.198.231`
 - `176.32.33.108`
