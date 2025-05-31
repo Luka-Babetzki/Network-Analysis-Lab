@@ -21,6 +21,7 @@ The objective of this lab is to investigate a suspected malware compromise by an
 - Zui
 
 ---
+
 ## Steps
 
 ### Scenario
